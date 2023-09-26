@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/magnifying_glass"
+        android:title="Search"  />
+    <item
+        android:id="@+id/saved"
+        android:icon="@drawable/heart"
+        android:title="Saved" />
+    <item
+        android:id="@+id/agents"
+        android:icon="@drawable/avatar"
+        android:title="Agents" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/notification"
+        android:title="Notification"  />
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/avatar"
+        android:title="Account" />
+</menu>

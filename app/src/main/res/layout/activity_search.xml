@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradiant_background"
+    android:layout_height="match_parent"
+    tools:context=".activities.Search">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDetailFirst"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/placeholder" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:button="@drawable/ic_back"
+            android:paddingBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivDetailFirst" />
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/ivShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="10dp"
+            android:button="@drawable/share"
+            app:layout_constraintTop_toTopOf="@id/ivDetailFirst"
+            app:layout_constraintEnd_toEndOf="@id/ivDetailFirst"/>
+        <HorizontalScrollView
+            android:id="@+id/hv_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivDetailFirst">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button_color"
+                    android:text="Photos"
+                    app:cornerRadius="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_plants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:backgroundTint="@color/button_color"
+                    android:text="Plans"
+                    app:cornerRadius="0dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:backgroundTint="@color/button_color"
+                    android:text="Street View"
+                    app:cornerRadius="0dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_plants"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:backgroundTint="@color/button_color"
+                    android:text="Location"
+                    app:cornerRadius="0dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_street"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:backgroundTint="@color/button_color"
+                    android:text="Video"
+                    app:cornerRadius="0dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_location"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$"
+            android:textAlignment="center"
+            android:textColor="@color/light_green"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hv_first" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="240"
+            android:textAlignment="center"
+            android:textColor="@color/light_green"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailSymbol"
+            app:layout_constraintTop_toBottomOf="@+id/hv_first" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="AED"
+            android:textColor="@color/gray_2"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailPrice"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="/"
+            android:textColor="@color/gray_2"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailCurrency"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailRentDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Month"
+            android:textColor="@color/gray_2"
+            app:layout_constraintStart_toEndOf="@+id/tvSlash"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/high_floor_2_br_vacant_41_months_payment_plan"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailPrice" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle"
+            app:srcCompat="@drawable/location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Jafza One, FZJOB1320 Dubai."
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailAddress"
+            app:srcCompat="@drawable/ic_domain_24px" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Villa"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/type"
+            app:layout_constraintTop_toTopOf="@+id/type" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailType"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailAddress"
+            app:srcCompat="@drawable/mark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="529 Sq Ft"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/mark"
+            app:layout_constraintTop_toTopOf="@+id/mark" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvDoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailArea"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailAddress"
+            app:srcCompat="@drawable/kitchen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailKitchen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="4"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tvDoor"
+            app:layout_constraintTop_toTopOf="@+id/tvDoor" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bathtub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailKitchen"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailAddress"
+            app:srcCompat="@drawable/bathtub" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetailBathtub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="3"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/bathtub"
+            app:layout_constraintTop_toTopOf="@+id/bathtub" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/margine_shape"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingTop="10dp"
+            android:text="Mortgage Calculator"
+            android:textAlignment="center"
+            android:textColor="@color/light_green"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="10dp"
+            android:text="Overview"
+            android:textColor="@color/light_green"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Reference ID/Number"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/overview" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_reference_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="1234"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reference" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/reference" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvListingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Listing Date"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_listingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="2022-10-17"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvListingDate" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/tvListingDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Detail_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Type"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_Detail_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Villa"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Detail_type" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/Detail_type" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Price/Rent price"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_DetailSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="5dp"
+            android:text="INR"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_detailPrice"
+            app:layout_constraintTop_toTopOf="@+id/price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_detailPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="88.9M"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/price" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rent_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Rent Duration"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rent_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Monthly"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rent_duration" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/rent_duration" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Area"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="1000000 m2"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/area" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/area" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Rooms"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="3+3"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rooms" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/rooms" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/parking_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Parking Spaces"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_parking_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="3"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parking_space" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/parking_space" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/furniture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Furniture"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_furniture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Any"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/furniture" />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/furniture" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/floor_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Floor level"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_floor_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Topfloor"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/floor_level" />
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/floor_level" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/property_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Property age"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_property_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="5"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/property_age" />
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/property_age" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/property_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Property Status"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view14" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_property_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Premium"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/property_status" />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/property_status" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deed_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Deed Status"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_deed_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginEnd="30dp"
+            android:text="Detached Parcel"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deed_status" />
+
+        <View
+            android:id="@+id/view16"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/deed_status" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/property_orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Property Orientation"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_property_orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="North, West, Any"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/view17"
+            app:layout_constraintStart_toEndOf="@+id/property_orientation"
+            app:layout_constraintTop_toTopOf="@+id/property_orientation" />
+
+        <View
+            android:id="@+id/view17"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_property_orientation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="10dp"
+            android:text="Description"
+            android:textColor="@color/light_green"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="North, West, Any"
+            android:textAlignment="center"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/interior_amenities"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="10dp"
+            android:text="Interior Amenities"
+            android:textColor="@color/light_green"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+        <CheckBox
+            android:id="@+id/cb_balcony"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interior_amenities" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tv_balcony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Balcony"
+            android:textColor="@color/light_black2"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_balcony"
+            app:layout_constraintStart_toEndOf="@+id/cb_balcony"
+            app:layout_constraintTop_toTopOf="@+id/cb_balcony" />
+
+        <CheckBox
+            android:id="@+id/cb_walk"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:checked="true"
+            app:layout_constraintStart_toEndOf="@+id/tv_balcony"
+            app:layout_constraintTop_toBottomOf="@+id/interior_amenities" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/appCompatCheckedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Walk-in Closet"
+            android:textColor="@color/light_black2"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_walk"
+            app:layout_constraintStart_toEndOf="@+id/cb_walk"
+            app:layout_constraintTop_toTopOf="@+id/cb_walk" />
+
+        <CheckBox
+            android:id="@+id/cb_build"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_balcony" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tv_build"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Built in Wardrobes"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/light_black2"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_build"
+            app:layout_constraintStart_toEndOf="@+id/cb_build"
+            app:layout_constraintTop_toTopOf="@+id/cb_build" />
+
+        <CheckBox
+            android:id="@+id/cb_cloakroom"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:checked="true"
+            app:layout_constraintStart_toEndOf="@+id/tv_build"
+            app:layout_constraintTop_toBottomOf="@+id/cb_balcony" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/tv_cloakroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Cloakroom"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/light_black2"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_cloakroom"
+            app:layout_constraintStart_toEndOf="@+id/cb_cloakroom"
+            app:layout_constraintTop_toTopOf="@+id/cb_cloakroom" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_shape_gray"
+            android:paddingVertical="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_cloakroom" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/agent_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:text="Mohammad"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/agent_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="5dp"
+            android:text="Ibrahim"
+            android:textColor="@color/light_black2"
+            app:layout_constraintStart_toEndOf="@+id/agent_first_name"
+            app:layout_constraintTop_toTopOf="@+id/img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Marketing Specialist"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/agent_first_name"
+            app:layout_constraintTop_toBottomOf="@+id/agent_first_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Speak: English, Arbic"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/agent_first_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_designation" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/button_color"
+            android:textAllCaps="false"
+            android:text="Follow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/agent_first_name" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/img"
+            app:layout_constraintTop_toBottomOf="@+id/img"
+            app:srcCompat="@drawable/image_66" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="15dp"
+            android:text="Company Name"
+            android:textColor="@color/light_black2"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView5"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/avg_house_price"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="10dp"
+            android:text="Average Housing Prices"
+            android:textColor="@color/light_green"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/avg_house_price"
+            app:layout_constraintTop_toBottomOf="@+id/avg_house_price"
+            app:srcCompat="@drawable/sale" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/avg_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginStart="15dp"
+            android:text="Average Sale Prices 88.89 SAR"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView9"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView9"
+            app:layout_constraintTop_toTopOf="@+id/appCompatImageView9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/avg_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="88.89 SAR"
+            android:textColor="@color/light_black2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/avg_sale"
+            app:layout_constraintTop_toBottomOf="@+id/avg_sale" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/market_trend"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="10dp"
+            android:text="Market Trends"
+            android:textColor="@color/light_green"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

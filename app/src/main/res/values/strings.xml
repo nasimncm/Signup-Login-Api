@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Turegu New</string>
+    <string name="the_best_way_to_find_your_home">The Best way to find\n Your home!</string>
+    <string name="language">Language</string>
+    <string name="area_unit">Area Unit</string>
+    <string name="currency">Currency</string>
+    <string name="next">Next</string>
+    <string name="signin_sub">Lorem ipsum as it is sometimes\nknown, is dummy text used.</string>
+    <string name="email">Email*</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_underline"><u>Forgot Password?</u></string>
+    <string name="facebook">Facebook</string>
+    <string name="create">Don’t you have an account?</string>
+    <string name="already">Already Registered?</string>
+    <string name="create_account"><u>Create Account</u></string>
+    <string name="create_acc">Create Account</string>
+    <string name="signin"><u>Sign In</u></string>
+    <string name="name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="password">Password*</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_full_name">Enter your first name</string>
+    <string name="en">En</string>
+    <string name="area">Area</string>
+    <string name="enter_your_last_name">Enter your last name</string>
+    <string name="forgot_sub">Please enter your registered email\naddress to reset your password.</string>
+    <string name="reset_sub">Please enter your old password to\nreset your password.</string>
+    <string name="submit">Submit</string>
+    <string name="go_to_back"><u>Go to Back</u></string>
+    <string name="reset_password">Reset Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_old_password">Enter your old password</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="enter_your_confirm_password">Enter your confirm password</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="password_error">Please enter a valid Password.</string>
+    <string name="email_error">Please enter a valid Email.</string>
+    <string name="old_error">Please enter Old password.</string>
+    <string name="new_error">Please enter New password.</string>
+    <string name="firstName_error">Please enter a First Name.</string>
+    <string name="lastName_error">Please enter a Last Name.</string>
+    <string name="high_floor_2_br_vacant_41_months_payment_plan">High Floor 2 BR | Vacant |\n41 months payment plan</string>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Arabic</item>
+        <item>Hindi</item>
+    </string-array>
+    <string-array name="area">
+        <item>Turkey</item>
+        <item>USA</item>
+        <item>UAE</item>
+        <item>UK</item>
+    </string-array>
+    <string-array name="currency">
+        <item>AED</item>
+        <item>INR</item>
+        <item>Dollar</item>
+        <item>Riyal</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_property">Search Property</string>
+    <string name="name1">Name</string>
+    <string name="nasim_ansari">Nasim Ansari</string>
+    <string name="emailwithoutstar">Email</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="_91_9899830751">+91 9899830751</string>
+    <string name="update">Update</string>
+    <string name="change_password">Change Password</string>
+    <string name="account_edit">Account Edit</string>
+
+    <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#01B8A6</item>
+        <item name="colorSwitchThumbNormal">#cc0000</item>
+    </style>
+</resources>
